@@ -26,7 +26,6 @@ export default function Home () {
 	const [search, setSearch] = useState('');
 	const [users, setUsers] = useState([]);
 	const [usersFiltered, setUsersFiltered] = useState([]);
-	let timeout = 0;
 
 	useEffect(() => {
 		userService.getAll()
@@ -58,8 +57,8 @@ export default function Home () {
 			
 			{
 				usersFiltered
-				  .map((user) =>
-					<User key={user.first_name + user.last_name} first_name={user.first_name} last_name={user.last_name}/>
+				  .map((user, index) =>
+					<User key={index} first_name={user.first_name} last_name={user.last_name}/>
 				  )
 			}
 			{/* Display Users */}
