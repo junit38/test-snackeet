@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"organisms/*": ["components/organisms/*"]
+		}
+	}
+}
